@@ -1,0 +1,298 @@
+{% extends "layouts/bas.html" %}
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+          width: 130px;
+          position: fixed;
+          z-index: 1;
+          top: 20px;
+          right: 10px;
+          background: #ffffff;
+          overflow-x: hidden;
+          padding: 25px 0;
+        }
+        
+        .sidenav a {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #000000;
+          display: block;
+        }
+        
+        .sidenav a:hover {
+          color: #000000;
+        }
+        
+        .main {
+          margin-left: 140px; /* Same width as the sidebar + left position in px */
+          font-size: 28px; /* Increased text to enable scrolling */
+          padding: 0px 10px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="sidenav">
+          <div id="quizResults">Your score:</div>
+        </div>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quiz Example</title>
+  </head>
+  <body>
+    <h1>Quiz Example</h1>
+    <form>
+        <div class="card" style="width: 78.75rem;">
+            <div class="card-body">
+                <h2>Question 1</h2>
+                <p>When was poison gas first used?</p>
+                <label>
+                  <input type="radio" name="q1" value="paris"> 1914
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q1" value="1915"> 1915  
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q1" value="berlin"> 1916
+                </label>
+            </div>
+          </div>
+      
+          <div class="card" style="width: 78.75rem;">
+            <div class="card-body">
+                <h2>Question 2</h2>
+                <p>What was created to protect soldiers from poison gas?</p>
+                <label>
+                  <input type="radio" name="q2" value="jupiter"> special scarves
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q2" value="mars"> bandanas
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q2" value="gas masks"> gas masks
+                </label>
+            </div>
+          </div>
+
+          <div class="card" style="width: 78.75rem;">
+            <div class="card-body">
+                <h2>Question 3</h2>
+                <p>Who invented the first airplane?</p>
+                <label>
+                  <input type="radio" name="q3" value="vatican city"> Amelia Earhart
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q3" value="Wright brothers"> Wright brothers
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q3" value="liechtenstein"> Edagar Airplane jr.
+                </label>
+            </div>
+          </div>
+
+          <div class="card" style="width: 78.75rem;">
+            <div class="card-body">
+                <h2>Question 4</h2>
+                <p>Who created the first machine gun?</p>
+                <label>
+                  <input type="radio" name="q4" value="vatican city"> The French
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q4" value="monaco"> The Germans
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q4" value="Hiram Maxim"> Hiram Maxim
+                </label>
+            </div>
+          </div>
+
+          <div class="card" style="width: 78.75rem;">
+            <div class="card-body">
+                <h2>Question 5</h2>
+                <p>What is the smallest country in the world?</p>
+                <label>
+                  <input type="radio" name="q5" value="the machine gun war"> "the machine gun war"
+
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q5" value="monaco"> "the destructive war"
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="q5" value="liechtenstein"> "the poison gas war"
+                </label>
+            </div>
+          </div>
+      
+      
+      <br>
+      <br>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+    
+    <script>
+      function submitQuiz() {
+        var numCorrect = 0;
+        var numWrong = 100;
+        
+        var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+        if (q1Answer === "1915") {
+          numCorrect++;
+        } else {
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+        }
+        
+        var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+        if (q2Answer === "gas masks") {
+          numCorrect++;
+        } else {
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+        }
+        
+        var q3Answer = document.querySelector('input[name="q3"]:checked').value;
+        if (q3Answer === "Wright brothers") {
+          numCorrect++;
+        } else {
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+        }
+
+        var q4Answer = document.querySelector('input[name="q4"]:checked').value;
+        if (q4Answer === "Hiram Maxim") {
+          numCorrect++;
+        } else {
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+        }
+
+        var q5Answer = document.querySelector('input[name="q5"]:checked').value;
+        if (q5Answer === "the machine gun war") {
+          numCorrect++;
+        } else {
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+          numWrong--;
+        }
+        
+        var quizResults = document.getElementById("quizResults");
+        quizResults.innerHTML = "You got a " + numWrong + "%";
+      }
+    </script>
+  </body>
+</html>
+{% endblock %}

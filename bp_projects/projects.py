@@ -5,19 +5,23 @@ app_projects = Blueprint('projects', __name__,
                 template_folder='templates/bp_projects/')
 
 # connects /kangaroos path to render kangaroos.html
-@app_projects.route('/portfolio/')
-def portfolio():
-    return render_template("portfolio.html")
+@app_projects.route('/WS/')
+def WS():
+    return render_template("WS.html")
 
 # connects /kangaroos path to render kangaroos.html
-@app_projects.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
+@app_projects.route('/MC/')
+def MC():
+    return render_template("MC.html")
 
-@app_projects.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app_projects.route('/MGUN/')
+def MGUN():
+    return render_template("MGUN.html")
 
-@app_projects.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app_projects.route('/AP/')
+def AP():
+    return render_template("AP.html")
+
+@app_projects.route('/GAS/')
+def GAS():
+    return render_template("GAS.html")
